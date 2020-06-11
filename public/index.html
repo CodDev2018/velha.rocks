@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <meta name="description" content="Convide os amigos para jogar Jogo da velha">
+    <meta name="keywords" content="Jogo da Velha, jogue grátis, jogue com os amigos, jogo online, tic tac toe">
+    <meta name="robots" content="">
+    <meta name="revisit-after" content="1 month">
+    <meta name="language" content="Portuguese">
+    <meta name="generator" content="N/A">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Jogo da Velha</h1>
+        <div id="app">
+            <p v-if="game">
+                <strong>{{game._player1._name}}</strong>
+                Vs
+                <strong>{{game._player2._name}}</strong>
+            </p>
+            <p>{{message}}</p>
+
+            <div class="game" v-if="game">
+                <div class="board">
+                    <button v-for="cell in game._board._cells" @click="makeMove(cell)"
+                        :class="{'cellX': cell.symbol == 'X', 'cellO': cell.symbol == 'O' }">
+                        {{cell.symbol}}
+                    </button>
+                </div>
+                <button @click="resetGame()" class="btn" v-if="game._gameOver">Jogar Novamente</button>
+            </div>
+
+            <div class="register" v-if="!game && !blockRegister">
+                <input type="text" v-model="playerName" placeholder="Entre com seu nome...">
+                <button @click="startGame()" class="btn">Jogar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/vendor/socket.io-client/dist/socket.io.js"></script>
+    <script src="/vendor/vue/dist/vue.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
