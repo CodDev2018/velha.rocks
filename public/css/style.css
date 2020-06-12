@@ -47,7 +47,7 @@ a {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 400px);
 }
 
 .board {
@@ -107,7 +107,9 @@ button.btn {
     text-align: left;
 }
 
-.textos h2, .textos p, .textos dl dd {
+.textos h2,
+.textos p,
+.textos dl dd {
     margin-bottom: 20px;
 }
 
