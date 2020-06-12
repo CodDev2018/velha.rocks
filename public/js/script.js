@@ -8,6 +8,8 @@ const app = new Vue({
     playerName: null,
     message: "",
     blockRegister: false,
+    txtConvite:
+      "https://api.whatsapp.com/send?text=Venha+jogar+comigo+o+Jogo+da+Velha+mais+Rocks+da+internet+em+http%3A%2F%2Fvelha.rocks&rlz=1C1GCEA_enBR808BR808&oq=whatsapp%3A%2F%2Fsend%3Ftext%3DVenha+jogar+comigo+o+Jogo+da+Velha+mais+Rocks+da+internet+em+http%3A%2F%2Fvelha.rocks",
   },
   methods: {
     startGame() {
