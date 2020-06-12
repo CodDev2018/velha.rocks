@@ -12,6 +12,12 @@ body {
     color: white;
 }
 
+.logo {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 main {
     max-width: 960px;
     width: 100%;
@@ -32,11 +38,16 @@ p {
     margin: 10px 0;
 }
 
+a {
+    color: rgb(141, 27, 116)
+}
+
 #app {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    min-height: 100vh;
 }
 
 .board {
@@ -86,8 +97,24 @@ button.btn {
     padding: 5px;
     border-radius: 5px;
     border: none;
-    background-color: cadetblue;
+    background-color: rgb(126, 7, 106);
     color: white;
     text-transform: uppercase;
     margin-top: 10px;
+}
+
+.textos {
+    text-align: left;
+}
+
+.textos h2, .textos p, .textos dl dd {
+    margin-bottom: 20px;
+}
+
+.textos dl {
+    padding-left: 20px;
+}
+
+.velha {
+    width: 300px;
 }

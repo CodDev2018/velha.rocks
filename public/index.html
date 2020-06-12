@@ -17,7 +17,9 @@
 
 <body>
     <main>
-        <h1>Jogo da Velha</h1>
+        <h1>
+            <img src="images/logo.png" alt="Velha Rocks" class="logo" />
+        </h1>
         <div id="app">
             <p v-if="game">
                 <strong>{{game._player1._name}}</strong>
@@ -40,6 +42,93 @@
                 <input type="text" v-model="playerName" placeholder="Entre com seu nome...">
                 <button @click="startGame()" class="btn">Jogar</button>
             </div>
+        </div>
+
+        <div>
+            <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+                src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=codinomedevel-20&language=pt_BR&marketplace=amazon&region=BR&placement=B07DYWHWG2&asins=B07DYWHWG2&linkId=9d02835bc9ff942a2c4098726743f559&show_border=true&link_opens_in_new_window=true"></iframe>
+        </div>
+
+        <div class="textos">
+
+            <h2>O Jogo da Velha</h2>
+            <p>No século 19, era comum as senhoras se reunirem para jogar noughts and crosses (zeros e cruzes) enquanto
+                bordavam e conversavam. Foi assim que o passatempo virou “jogo das velhas” e depois simplificado para
+                “jogo da velha”. Mas também pode chamar de cerquilha, jogo do galo ou tic-tac-toe.</p>
+            <p>Não se sabe a origem exata do jogo da velha, apesar de terem sido achadas esculturas em rochas datadas do
+                antigo egito que se assemelham a tabuleiros do jogo da velha.</p>
+            <p>Também existem relatos/lendas que Predro Alvares Cabral gostava de jogar Jogo da Velha durante as
+                navegações,
+                e seria esse o primeiro jogo ensionado aos povos indíginas pelos portugueses.</p>
+            <p>Sabe-se também que faz parte dos jogos conhecidos como “família do moinho” ou “trilha” – nos quais o
+                objetivo é posicionar as peças de modo que formem uma linha reta. Há também versões em que variam os
+                números de linhas e colunas, geralmente três ou cinco. Conhecido praticamente em todo o mundo, o jogo
+                varia de nome conforme a região.</p>
+            <p>Com tudo, o Jogo da Velha é um passatempo bastante antigo e fácil de se ensinar que vem passando por
+                gerações e ainda hoje é bem divertido. Por ter regras muito claras e simples pessoas de todas as idades
+                podem
+                jogar e se divertir.</p>
+            <p>Para que um dos jogadores seja considerado vitorioso, é necessário que ocupe 3 posições do tabuleiro em
+                sequencia, seja linha, coluna ou diagonal.</p>
+            <p>Em jogos entre participantes mais experinetes é normal que o resultado seja o empate, ou como
+                popularmente se
+                diz, "deu velha".</p>
+
+            <p>
+                Um jogador pode facilmente jogar um jogo perfeito seguindo as seguintes regras por ordem de prioridade:
+            </p>
+
+            <dl>
+                <dd><b>1</b>. Ganhar: Se você tem duas peças numa linha, ponha a terceira.</dd>
+                <dd><b>2</b>. Bloquear: Se o oponente tiver duas peças em linha, ponha a terceira para bloqueá-lo.</dd>
+                <dd><b>3</b>. Triângulo: Crie uma oportunidade em que você poderá ganhar de duas maneiras.</dd>
+                <dd><b>4</b>. Bloquear o Triângulo do oponente:
+                    <dl>
+                        <dd>Opção 1: Crie 2 peças em linha para forçar o oponente a se defender, contanto que não
+                            resulte nele criando um triângulo ou vencendo. Por exemplo, se 'X' tem dois cantos opostos
+                            do tabuleiro e 'O' tem o centro, 'O' não pode jogar num canto (Jogar no canto nesse cenário
+                            criaria um triângulo em que 'X' vence).</dd>
+                        <dd>Opção 2: Se existe uma configuração em que o oponente pode formar um triângulo,
+                            bloqueiem-no.</dd>
+                    </dl>
+                </dd>
+                <dd><b>5</b>. Centro: Jogue no centro.</dd>
+                <dd><b>6</b>. Canto vazio: jogue num canto vazio.</dd>
+            </dl>
+
+            <p>Fontes: <br><a
+                    href="https://pt.wikipedia.org/wiki/Jogo_da_velha">https://pt.wikipedia.org/wiki/Jogo_da_velha</a>
+                <br>
+                <a
+                    href="https://super.abril.com.br/mundo-estranho/qual-e-a-origem-do-jogo-da-velha/">https://super.abril.com.br/mundo-estranho/qual-e-a-origem-do-jogo-da-velha/</a>
+                <a
+                    href="https://super.abril.com.br/blog/oraculo/por-que-o-jogo-da-velha-tem-esse-nome/">https://super.abril.com.br/blog/oraculo/por-que-o-jogo-da-velha-tem-esse-nome/</a>
+
+            </p>
+
+            <h2>Sobre o Velha Rocks</h2>
+            <p>
+                <img src="images/velha-rocks.png" alt="Velha Rocks" class="velha">
+            </p>
+            <p>O Velha Rocks, o Jogo da Velha mais "Rocks" da internet, foi criado por Paulo Bezerra, fundador da CodDev
+                Cursos, e foi mostrado passo-a-passo do
+                seu
+                desenvolvimento para os inscritos no canal do YouTube da <a
+                    href="https://www.youtube.com/PauloBezerraCodDev">CodDev TV </a>.
+                O código base para o site que você está vendo agora pode ser encontrado no GitHub da CodDev pleo link:
+                <a href="https://github.com/CodDev2018/JogoDaVelha">https://github.com/CodDev2018/JogoDaVelha</a>.
+            </p>
+            <p>
+                Não pense que esse é apenas um jogo bobo como tantos outros por ai, o grande ponto é que ele conecta
+                dois
+                jogadores em tempo real utilizando WebSocket, uma tecnologia que permite dados trafegarem tanto do
+                cliente
+                para o servidor quanto do servidor para o cliente, para saber mais assista a série <a
+                    href="https://www.youtube.com/playlist?list=PLhW5jRUibMHW7oHSWSE9Aufn31QxkahpO"> Jogo da
+                    Velha</a> no YouTube.
+            </p>
+            <p>Para ver mais trabalhos do Paulo Bezerra e todos os Cursos da CodDev, veja: <a
+                    href="https://coddev.com.br/">coddev.com.br</a>.</p>
         </div>
     </main>
 
