@@ -50,6 +50,17 @@ a {
     min-height: calc(100vh - 400px);
 }
 
+.anuncios-amazon {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.anuncios-amazon iframe {
+    background-color: #ddd;
+    margin-left: 10px;
+}
+
 .board {
     width: 100%;
     display: grid;
