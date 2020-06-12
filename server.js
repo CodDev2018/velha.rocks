@@ -4,11 +4,10 @@ import socketIo from "socket.io";
 import ejs from "ejs";
 import Player from "./src/model/Player.js";
 import Game from "./src/model/Game.js";
-import { Socket } from "dgram";
 
 const app = express();
 
-const server = http.Server(app).listen(8080);
+const server = http.Server(app).listen(3000);
 const io = socketIo(server);
 const clients = {};
 
