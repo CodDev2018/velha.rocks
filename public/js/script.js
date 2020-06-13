@@ -13,7 +13,7 @@ const app = new Vue({
   },
   methods: {
     startGame() {
-      this.message = "Aguardnado adversário...";
+      this.message = "Aguardando adversário...";
       this.blockRegister = true;
       this.socket.emit("game.begin", {
         playerName: this.playerName,
